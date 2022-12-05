@@ -1,15 +1,18 @@
+/*font lenker fra google font*/
+/*jeg har brukt copy right free bilder, stortsett fra unsplash.com*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Solway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+/*lagde valgebare farge som gjør enklere å finne*/
 :root{
-    /*--btn-color:#e58f00;
-    --about-sec:#1d1d23;*/
+    
     --btn-color:#317A72;
     --about-sec:#7A3139;
     --nav:#B34C61;
     --bild-color: #e58f00;
      
 }
+/*alle elementer inkludert i designet*/
 *{
     padding: 0;
     margin: 0;
@@ -20,10 +23,12 @@
     transition: 0.5s;
     text-transform: capitalize;
 }
+
 html{
     font-size: 65%;
     scroll-behavior: smooth;
 }
+/*søke felt for å navigere nettsiden*/
   nav{
     /*background: #E51A5A;*/
     background: var(--nav);
@@ -32,6 +37,7 @@ html{
     position: fixed;
     z-index: 9999999;
   }
+  /*deignet på logoen*/
   label.logo{
     color: white;
     font-size: 35px;
@@ -47,10 +53,11 @@ html{
     background-position: left bottom;
     transition: background-size 300ms ease;
   }
-
+/*hover som viser under_bakgrunnen med farger*/
   label.logo:hover{
     background-size: 100% 3px;
   }
+  /*desinet på navigasjons listen*/
 nav ul{
     float: right;
     margin-right: 20px;
@@ -83,6 +90,7 @@ nav ul{
   #check{
     display: none;
   }
+  /*navigasjon for mindre størrelse skjermer og knappen til å åpne søke listen*/
   @media (max-width: 952px){
     label.logo{
       font-size: 30px;
@@ -92,6 +100,7 @@ nav ul{
       font-size: 16px;
     }
   }
+  /*designet av søkelisten for mindre skjermer */
   @media (max-width: 858px){
     .checkbtn{
       display: block;
@@ -122,20 +131,15 @@ nav ul{
       left: 0;
     }
   }
-  /*
-  section{
-   background: url(bg1.jpg) no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
-  }
-  */
 
-  /* design for home section */
+
+  /* design for indxen og er mer omfattende for html filer som benytte seg av*/
 main, footer{
     padding: 0 auto;
     margin: 0;
     box-sizing: border-box;
 }
+/*bilde i bakgrunn og kontekst layouten for index filen*/
 .home{
     padding: 1rem 7%;
     background: url(images/background.png);
@@ -171,12 +175,14 @@ main, footer{
     transform: translate(0%,0%);
     animation: mymove 5s infinite ease-in-out;
 }
+/*animasjon for bilde bevegelser*/
 @keyframes mymove {
     0%   {top: 0px;}
     50%   {top: 15px;}
     75%   {top: 10px;}
     100%   {top: 0px;}
   }
+  /*resten av text design*/
 .home-text-content{
     padding: 0 8rem;
     
@@ -220,7 +226,7 @@ main, footer{
     border: 1px solid white;
 }
 
-/* menu*/
+/* meny main kontekst design for meny filen*/
 
 .meny{
     padding: 1rem 7%;
@@ -284,7 +290,7 @@ main, footer{
     border: 1px solid white;
 }
 
-/*reserv plass*/
+/*igjen for reserv plass, tar utgangspunkt i index fil koden. */
 .reserv{
     padding: 1rem 7%;
     background: var(--btn-color);
@@ -348,7 +354,7 @@ main, footer{
     border: 1px solid white;
 }
 
-/*Accessibility*/
+/*Accessibility main desing, samme som resver filen*/
 .akses{
     padding: 1rem 7%;
     background: var(--btn-color);
@@ -420,11 +426,12 @@ main, footer{
     background-size: 100% 3px;
 
 }
+/*endrer på bilde størrelsen for å mache siden*/
 #topic-bok{
     width: 80vh;
 }
 
-
+/*designet av om oss delen i index. stort sett kode om tekst layouten og bakgrunnen*/ 
 .about{
     padding: 2rem 7%;
     background: var(--about-sec);
@@ -463,6 +470,7 @@ main, footer{
     font-size: 1.5rem;
     line-height: 35px;
 }
+/*designet av qualiteten delen i indec filen */
 .quality{
     padding: 4rem 7%;
     background-image: linear-gradient(60.34deg, white 52.45%, var(--btn-color) 52.45%);
@@ -497,6 +505,7 @@ main, footer{
     width: 100%;
     object-fit: cover;
 }
+/*desing av bilde samling delen i index filen*/
 .gallery{
     padding: 4rem 7%;
     background: var(--about-sec);
@@ -523,10 +532,13 @@ main, footer{
 .inner-gallery .gallery-image img{
     width: 100%;
 }
+/*animerer hover på bilde samlingen som roterer noen grader*/
 .inner-gallery .gallery-image:hover img{
     transform: perspective(1000px) rotateX(-2.80deg) rotateY(-2.23deg) scale3d(1,1,1);
     clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
 }
+
+/*designet av nyt delen i index*/
 .enjoy-our-food{
     padding: 2rem 7%;
     background: url(images/enjoye.png);
@@ -559,6 +571,7 @@ main, footer{
     line-height: 30px;
     
 }
+/*meny delen i meny filen som viser retter*/
 .our-menu-food{
     padding: 2rem 7%;
     background-color: var(--about-sec);
@@ -614,19 +627,8 @@ main, footer{
     transform: scale(1.1);
     
 }
-/*
-.before{
-    background-color: #1d1d23;
-    padding: 2rem 0;
-}
-.before{
-    width: 100%;
-}
-.before img{
 
-    width: 100%;
-    object-fit: cover;
-}*/
+/*en mer generell kode for footer delen i alle filen men bortsatt fra funpagen. hensikten med det viser slutt delen på en nettside*/
 
 .footer{
     background: #1d1d23;
@@ -647,7 +649,7 @@ main, footer{
     font-weight: bold;
     font-family: 'Solway', serif;
 }
-
+/*bruker navigasjonbar for eksterne og interne nettsider*/
 .footer-navbar{
     margin-top: 15px;
 }
@@ -675,19 +677,7 @@ main, footer{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*desegnet av mindre skjermer. noe av koder over endres til å tilpasse størrelsen*/
 
 
 @media (max-width:767px) {
@@ -715,7 +705,7 @@ main, footer{
         padding: 1rem;
     }
 
-    /* home css desing */
+    /* hjem css desing */
 
     .home-text-content{
         padding: 0 2rem;
@@ -759,8 +749,8 @@ main, footer{
 
 }
 
-/*funpage */
-
+/*designet funpage filen  */
+/*designet av mian delen*/
 .fun-content{
     display: flex;
     align-items: center;
@@ -779,6 +769,7 @@ main, footer{
     75%   {top: 10px;}
     100%   {top: 0px;}
   }
+  /*designet av overskriften fungpage filen*/
 .fun-content h1{
     color: hsl(0, 0%, 30%);
     font-size: 90px;
@@ -793,7 +784,7 @@ main, footer{
         hsl(0, 0%, 1000%)10%,
         hsl(0, 0%, 30%)20%
     );
-
+/*skinner av teksten*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 3s infinite linear;
@@ -801,7 +792,7 @@ main, footer{
 
     
 }
-
+/*aktivitet perioden for å skinne overskriften*/
 @keyframes shine {
     0%{
         background-position: 0;
@@ -813,7 +804,7 @@ main, footer{
         background-position: 600px;
     }
 }
-
+/*border boks for bakgrunnen i overskriften*/
 .fun-content h1:hover{
     
     transition: all 0.3s ease 0s;
@@ -829,6 +820,8 @@ main, footer{
         ;
 }
 
+/*main desigent*/
+
 .fun{
     width: 100%;
     height: 100vh;
@@ -838,6 +831,7 @@ main, footer{
     position: relative;
     overflow: hidden;
 }
+/*boble animasjon som beveger infinitiv*/
 .bubble img{
     width: 50px;
     animation: bubble 7s linear infinite;
@@ -852,6 +846,7 @@ main, footer{
     bottom: -50px;
     z-index: 9;
 }
+/*animasjon for fisk i høyre siden, beveger mot venster og omigjen i evig tid*/
 .fish-right img{
     width: 50px;
     animation: fisk 5s linear infinite;
@@ -867,6 +862,7 @@ main, footer{
     right: -90px;
     z-index: 99;
 }
+/*sammme igjen for venstre siden*/
 .fish-left img{
     width: 20px;
     animation: fiskLeft 5s linear infinite;
@@ -882,7 +878,7 @@ main, footer{
     left: -90px;
     z-index: 999;
 }
-
+/*periode plan for animasjon bobler*/
 @keyframes bubble{
     0%{
         transform: translateY(0);
@@ -901,7 +897,7 @@ main, footer{
         opacity: 0;
     }
 }
-
+/*størrelse på bobble og tregheeten*/
 .bubble img:nth-child(1){
     animation-delay: 2s;
     width: 20px;    
@@ -930,6 +926,7 @@ main, footer{
     animation-delay: 2.7s;
     width: 20px;
 }
+/*periode plan for animasjon fisk fra høyre*/
 @keyframes fisk{
     0%{
         transform: translateX(0);
@@ -952,6 +949,7 @@ main, footer{
         opacity: 0;
     }
 }
+/*størrelser på fisk*/
 .fish-right img:nth-child(1){
     animation-delay: 2s;
     width: 50px; 
@@ -1016,7 +1014,7 @@ main, footer{
     animation-delay: 8.5s;
     width: 80px;
 }
-
+/*samme igjen for fisk fra venstre*/
 @keyframes fiskLeft{
     0%{
         transform: translateX(0);
